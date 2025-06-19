@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relove - Ulang Tahun Sayang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1 style="color: #ff6f91;">Selamat Ulang Tahun sayang kuuu 💖</h1>
+  </header>
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#musik">Musik</a>
+    <a href="#doa">Kartu Doa</a>
+    <a href="#galeri">Galeri Foto</a>
+    <a href="#games">Games</a>
+  </nav>
+
+  <section id="beranda">
+    <h2 style="color: #d6336c;">Happy Birthday Sayang</h2>
+    <p>"Selamat ulang tahun, sayang. Semoga hari ini seindah senyummu dan cintaku selalu jadi hadiah terbaik untukmu. I
+      love you!"</p>
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Foto Berdua"
+      style="margin-top: 20px; border-radius: 15px; width: 200px;" />
+  </section>
+
+  <section id="musik">
+    <h2>HBD Sayang 🎶</h2>
+    <audio controls autoplay loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+      Browser kamu tidak mendukung audio.
+    </audio>
+    <p style="margin-top: 10px;">Lagu kenangan kita ❤️</p>
+    <div style="margin-top: 20px;">
+      <video width="300" autoplay muted loop>
+        <!-- <source src="https://player.vimeo.com/external/374873222.sd.mp4?s=be68a594ed810ec5b77ddaf1736c582985de466e&profile_id=164" type="video/mp4"> -->
+        Browser tidak mendukung video.
+      </video>
+    </div>
+  </section>
+
+  <section id="doa">
+    <h2>Kartu Doa 🥰</h2>
+    <div class="doa-wrapper">
+      <div class="doa">
+        <div class="card">Semoga kita selalu bahagia bareng 💖</div>
+        <div class="card">Semoga kamu makin sayang tiap hari 😚</div>
+        <div class="card">Semoga kita sama-sama terus ❤️</div>
+        <div class="card">Semoga kamu cepet sukses, biar kita nikah hehe 😘</div>
+        <div class="card">Semoga kamu selalu sehat ya sayang 🥰</div>
+        <div class="card">Kita jalan-jalan tiap minggu 🤩</div>
+        <div class="card">Semoga nggak pernah bosen 😍</div>
+        <div class="card">Doa baik setiap hari 🥰</div>
+        <div class="card">Jaga hubungan kita selalu 💑</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri Foto 📸</h2>
+    <div class="galeri">
+      <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15" alt="Foto 1" />
+      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Foto 2" />
+      <img src="https://images.unsplash.com/photo-1586985289370-9e4a90d21f3c" alt="Foto 3" />
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Foto 4" />
+      <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15" alt="Foto 5" />
+    </div>
+  </section>
+
+  <section id="games">
+    <h2>Roda Tantangan 🎲</h2>
+    <div class="roda" id="hasil">Klik tombol di bawah</div>
+    <button onclick="putarRoda()"
+      style="margin-top: 20px; padding: 10px 20px; background: #ff6f91; color: white; border: none; border-radius: 5px;">Putar
+      Roda Cinta 💖</button>
+  </section>
+
+  <script>
+    const tantangan = [
+      "Peluk pasangan 1 menit",
+      "Nyanyiin lagu cinta",
+      "Foto berdua sekarang",
+      "Cerita kenangan lucu",
+      "Ucap 5 hal yang disuka",
+      "Buat pantun romantis",
+      "Tulis pesan cinta",
+      "Tatap mata 1 menit"
+    ];
+
+    function putarRoda() {
+      const hasil = document.getElementById('hasil');
+      const acak = Math.floor(Math.random() * tantangan.length);
+      hasil.innerText = tantangan[acak];
+    }
+  </script>
+</body>
+
+</html>
